@@ -1,0 +1,60 @@
+/* Smaller Digimon size */
+#digimon-wrapper {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+}
+
+#digimon-sprite {
+  width: 100%;
+  height: 100%;
+}
+
+/* Rotate for direction change */
+.rotate-left {
+  transform: scaleX(-1); /* Flip horizontally for left direction */
+}
+
+.rotate-right {
+  transform: scaleX(1); /* Normal for right direction */
+}
+
+/* Walking animations */
+.left-walk {
+  animation: walk-left 2s infinite;
+}
+
+.right-walk {
+  animation: walk-right 2s infinite;
+}
+
+@keyframes walk-left {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-5px); }
+}
+
+@keyframes walk-right {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+#speech-bubble {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#inspiration-message {
+  margin: 0;
+}
